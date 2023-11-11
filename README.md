@@ -15,14 +15,14 @@ This project aims to leverage machine learning to predict income levels, address
 ## FastAPI Interface
 After clicking on the link to the working FastAPI, click on "Try It Out", provide the required details, and click on the **"EXECUTE"** button.
 
-![App Screenshot](screenshots/FastAPI_before_pred.png)
+![App Screenshot](screenshots/app_home.png)
 
 ### Before Prediction
 
-![App Screenshot](screenshots/pred_before_execution.png)
+![App Screenshot](screenshots/app_solution.png)
 
 ### After Prediction
-![App Screenshot](screenshots/pred_after_exec.png)
+![App Screenshot](screenshots/app_pred.png)
 
 # Repository Contents:
 - [Project Overview](#project-overview)
