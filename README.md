@@ -71,12 +71,51 @@ ii. Create a virtual environment and install the required dependencies:
 ## Data Fields
 The data used in this project consists of a diverse collection of income-related attributes obtained from [source](your_data_source_link).
 
-| Column Name | Data Features | Description                                      |
-|-------------|-----------------|--------------------------------------------------|
-| Age         | Numeric         | Age of the individual                            |
-| Gender      | Categorical     | Gender of the individual                        |
-| Education   | Categorical     | Education level of the individual               |
-| ...         | ...             | ...                                              |
+| Column Name                | Data Type   | Description                                      |
+|----------------------------|-------------|--------------------------------------------------|
+| Age                        | Numeric     | Age of the individual                            |
+| Gender                     | Categorical | Gender of the individual                        |
+| Education                  | Categorical | Education level of the individual               |
+| Class Of Worker            | Categorical | Class of worker                                 |
+| Education Institute        | Categorical | Enrollment status in an educational institution in the last week  |
+| Marital Status             | Categorical | Marital status                                  |
+| Race                       | Categorical | Race                                            |
+| Hispanic Origin            | Categorical | Hispanic origin                                 |
+| Employment Commitment      | Categorical | Full or part-time employment status             |
+| Unemployment Reason        | Categorical | Reason for unemployment                         |
+| Employment Stat            | Categorical | Owns a business or is self-employed             |
+| Wage Per Hour               | Numeric     | Wage per hour                                   |
+| Labor Union Membership     | Categorical | Member of a labor union                         |
+| Weeks Worked In A Year      | Numeric     | Weeks worked in a year                          |
+| Industry Code              | Categorical | Industry category                               |
+| Major Industry Code        | Categorical | Major industry category                         |
+| Occupation Code            | Categorical | Occupation category                             |
+| Major Occupation Code       | Categorical | Major occupation category                       |
+| Num Persons Worked For Employer | Numeric | Number of persons worked for employer         |
+| Household and Family Stat   | Categorical | Detailed household and family status            |
+| Household Summary          | Categorical | Detailed household summary                      |
+| Under 18 Family            | Categorical | Family members under 18                         |
+| Veterans Admin Questionnaire| Categorical | Filled income questionnaire for Veterans Admin |
+| Vet Benefit                | Categorical | Veteran benefits                                |
+| Tax Filer Status           | Categorical | Tax filer status                                |
+| Gains                      | Numeric     | Gains from financial investments                |
+| Losses                     | Numeric     | Losses from financial investments               |
+| Stocks Status              | Categorical | Dividends from stocks                           |
+| Citizenship                | Categorical | Citizenship status                             |
+| Migration Year             | Numeric     | Year of migration                               |
+| Country Of Birth - Individual | Categorical | Individual's birth country                     |
+| Country Of Birth - Father   | Categorical | Father's birth country                          |
+| Country Of Birth - Mother   | Categorical | Mother's birth country                          |
+| Migration Code Change In MSA | Categorical | Migration code - Change in MSA                   |
+| Migration Prev Sunbelt      | Categorical | Migration previous Sunbelt                      |
+| Migration Code Move Within Reg | Categorical | Migration code - Move within region              |
+| Migration Code Change In Reg | Categorical | Migration code - Change in region                |
+| Residence 1 Year Ago        | Categorical | Lived in this house one year ago                |
+| Old Residence Region        | Categorical | Region of previous residence                   |
+| Old Residence State         | Categorical | State of previous residence                    |
+| Importance Of Record        | Numeric     | Weight of the instance                          |
+| Income Above 50k           | Categorical | Binary indicator if income is above $50,000     |
+
 
 # Machine Learning Lifecycle
 I employed the CRISP-DM (Cross-Industry Standard Process for Data Mining) methodology in this project. 
@@ -153,13 +192,13 @@ Following the CRISP-DM methodology, I systematically addressed the income predic
 
 # Author
 
-`Your Name`
+`Rasmo Wanyama`
 
 `Data Analyst/Data Scientist`
 
 Let's connect on LinkedIn:
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your_username/) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasmo-/) 
 
 # Acknowledgments:
 We would like to thank the open-source community and the data providers who contributed to the dataset used in this project. Their efforts have made advancements in income prediction possible.
