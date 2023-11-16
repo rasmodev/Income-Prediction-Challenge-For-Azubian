@@ -35,39 +35,26 @@ def home_page():
     st.image("https://i.ytimg.com/vi/WULwst0vW8g/maxresdefault.jpg")
     
     st.write("""
-    The "Income Prediction Challenge for Azubian" is a data-driven initiative that seeks to address the critical issue of income inequality in developing nations. The project focuses on utilizing machine learning techniques to predict whether an individual's income falls above or below a specific income threshold. By developing a robust predictive model, we aim to contribute to more accurate and cost-effective methods of monitoring key population indicators, such as income levels, between census years. This valuable information will empower policymakers to take more informed actions to mitigate and manage income inequality on a global scale.
+    This application is a machine learning project that aims to predict whether an individual's income falls above or below a specific income threshold. This information can be used to monitor income inequality and inform policy decisions.
     """)
 
     # The Problem of Income Inequality
     st.header("The Problem: Income Inequality 💸")
     st.write(
         """
-        Income inequality, a pervasive challenge that hinders economic progress and social well-being, demands innovative solutions. The "Income Prediction Challenge for Azubian" tackles this issue head-on, harnessing the power of machine learning to predict individual income levels.
-
+        Income inequality, a pervasive challenge that hinders economic progress and social well-being, demands innovative solutions. This app tackles this issue head-on, harnessing the power of machine learning to predict individual income levels.
         **Key Challenges of Income Inequality:** ⚠
-
         1. **Limited Economic Mobility:** 📉
-
             Individuals from lower-income households often face barriers to education and professional growth, perpetuating income disparities.
-
         2. **Healthcare Disparities:** 🩺
-
             Income inequality often translates into unequal access to quality healthcare, leading to adverse health outcomes for lower-income individuals.
-
         3. **Education Gaps:** 📚
-
             Children from low-income households may have limited access to quality education, hindering their future opportunities.
-
         4. **Social Unrest:** 💢
-
             Extreme income inequality can fuel social unrest as individuals feel disenfranchised and discouraged.
-
         5. **Economic Impact:** 📉
-
             Income inequality impedes economic growth by reducing aggregate demand and creating economic instability.
-
         6. **Policymaking Challenges:** 🧩
-
             Policymakers require accurate data and insights to formulate effective strategies for reducing income inequality.
             """)
 
@@ -80,30 +67,20 @@ def solution():
     # Solution Overview
     st.header("Solution 💡: Combating Income Inequality with Data-Driven Solutions 📈 ")
     st.write("""
-
-        The "Income Prediction Challenge for Azubian" utilizes machine learning to predict individual income levels, providing valuable data to policymakers for informed action. This data-driven approach offers several advantages:
-
+        The app utilizes machine learning to predict individual income levels, providing valuable data to policymakers for informed action. This data-driven approach offers several advantages:
         * **Cost-Effectiveness:** 💰
-
             Machine learning models are more cost-effective than traditional census methods.
-
         * **Timeliness:** ⏱️
-
             Income predictions can be generated frequently, enabling timely interventions.
-
         * **Scalability:** 🚀
-
             Machine learning models can be scaled to predict incomes for large populations, making them applicable to a wide range of scenarios.
         """)
     
     st.header("Objectives: 🎯")
     st.write("""
        1. **Income Prediction Model:** Develop a robust machine learning model to accurately predict individual income levels.
-
        2. **Economic Inequality Mitigation:** Empower policymakers with data-driven insights to effectively address income inequality.
-
        3. **Cost and Accuracy Improvement:** Enhance income-level monitoring through a cost-effective and accurate method compared to traditional census methods.
-
         Join us in tackling income inequality with data-driven solutions!
         """)
 
@@ -126,19 +103,12 @@ def solution():
     st.write("""
     
     **Empowering Policymakers and Promoting Equitable Growth 📈**
-
     By providing accurate and timely insights into income distribution, we can empower policymakers to make informed decisions that:
-
     * Enhance understanding of income patterns 📊
-
     * Identify areas with high income inequality 📍
-
     * Target interventions to address income gaps 🎯
-
     * Effectively allocate resources to poverty reduction 💰
-
     * Promote economic mobility for individuals from low-income backgrounds ⬆️
-
     Overall, this tool has the potential to make a meaningful contribution to the fight against income inequality and promote a more just and equitable society. ⚖️
     """)
 
@@ -147,12 +117,36 @@ def perform_eda():
     st.title("Exploratory Data Analysis")
     st.write("""
         📊📈 Welcome to the Exploratory Data Analysis for the "Income Prediction" Project! 📈📊
+        Gain a comprehensive understanding of income distribution and explore the factors that contribute to an individual's income level based on the census data that was used to build this prediction tool.
         Dive into the wealth of data and uncover insights about income prediction. Explore the data and understand the factors that contribute to an individual's income level. Let's begin our data-driven journey! 💰🔍
         """)
 
-    # Show the Power bi dashboard
+    # Show the Power BI dashboard
     power_bi()
 
+    # Add insights and recommendations button
+    if st.button("Show Insights and Recommendations"):
+        display_insights_and_recommendations()
+
+def display_insights_and_recommendations():
+    st.subheader("Data Insights and Recommendations")
+    st.write("""
+    From the dashboard, you can now appreciate the serious income inequality problem. Explore key insights and actionable recommendations for stakeholders to fight income inequality.
+    """)
+
+    # Table with insights and recommendations
+    st.table([
+        ["🎓 Higher education levels positively correlate with higher income.", "Invest in accessible and quality education, including scholarships and vocational training, for lower-income communities."],
+        ["👩‍🎓 Women are more likely below the income threshold than men.", "Support gender equality programs addressing wage disparities and encouraging women in STEM fields."],
+        ["👥 Income inequality exists across all employment statuses.", "Implement policies and programs supporting stable employment, job training, and entrepreneurship."],
+        ["🌍 Racial income disparities: Foster diversity and inclusion in workplaces.", "Promote equal opportunities, diversity training, and an inclusive work environment."],
+        ["🌐 Foreigners concentrated below the income threshold.", "Review immigration policies to ensure fair treatment and integration into the workforce."],
+        ["🏢 Majority below threshold in 'Unknown' occupations.", "Research challenges in different occupations and implement targeted support programs."],
+        ["💸 Nonfilers have higher representation below the threshold.", "Evaluate tax policies for fairness and consider incentives for low-income individuals."],
+        ["📊 Data-driven insights are crucial for addressing income inequality.", "Continue investing in data collection and analysis to inform evolving policies."]
+    ])
+
+# Define the Power BI display
 def power_bi():
     """
     Embeds the Power BI report with specified dimensions and full-screen height.
@@ -163,7 +157,7 @@ def power_bi():
 
     # Embed the Power BI iframe with specified dimensions
     power_bi_html = """
-    <iframe title="Sepsis" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYWI1NTRiNTgtMzc5Yi00MjUzLTk4YzAtYjFlZTk3ZWUwMjEyIiwidCI6IjQ0ODdiNTJmLWYxMTgtNDgzMC1iNDlkLTNjMjk4Y2I3MTA3NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe title="Report Section" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDNjMmExZjYtMWU2NS00NTBjLTk4Y2EtYmQ2MWU2OWMwODMyIiwidCI6IjQ0ODdiNTJmLWYxMTgtNDgzMC1iNDlkLTNjMjk4Y2I3MTA3NSJ9" frameborder="0" allowFullScreen="true"></iframe>
     """
 
     st.components.v1.html(power_bi_html)
@@ -177,13 +171,13 @@ def power_bi():
               margin: 0;
               padding: 0;
             }
-
             iframe {
               width: 100%;
               height: 100vh;
             }
         </style>
         """, unsafe_allow_html=True)
+
 
 
 def prediction():
@@ -217,7 +211,6 @@ def prediction():
     st.sidebar.markdown("**Occupation Code**: Choose the category code of the occupation of the individual (e.g., Category X, Category Y).")
     st.sidebar.markdown("**Major Occupation Code**: Select the major occupation code of the individual (e.g., Occupation 1, Occupation 2).")
     st.sidebar.markdown("**Total Employed**: Specify the number of persons worked for the employer (numeric value, e.g., 3, 5).")
-    st.sidebar.markdown("**Household Stat**: Choose the detailed household and family status of the individual (e.g., Single, Married-civilian spouse present).")
     st.sidebar.markdown("**Household Summary**: Select the detailed household summary (e.g., Child under 18 never married, Spouse of householder).")
     st.sidebar.markdown("**Veteran Benefits**: Choose whether the individual receives veteran benefits (Yes or No).")
     st.sidebar.markdown("**Tax Filer Status**: Select the tax filer status of the individual (e.g., Single, Joint both 65+).")
@@ -225,8 +218,6 @@ def prediction():
     st.sidebar.markdown("**Losses**: Specify any losses the individual has (numeric value, e.g., 300.0).")
     st.sidebar.markdown("**Dividends from Stocks**: Specify any dividends from stocks for the individual (numeric value, e.g., 120.5).")
     st.sidebar.markdown("**Citizenship**: Select the citizenship status of the individual (e.g., Native, Foreign Born- Not a citizen of U S).")
-    st.sidebar.markdown("**Year of Migration**: Enter the year of migration for the individual (numeric value, e.g., 2005).")
-    st.sidebar.markdown("**Country of Birth**: Choose the individual's birth country (e.g., United-States, Other).")
     st.sidebar.markdown("**Importance of Record**: Enter the weight of the instance (numeric value, e.g., 0.9).")
     
     # Create the input fields in the order of your DataFrame
@@ -247,7 +238,6 @@ def prediction():
         'occupation_code': 0,  # Default value
         'occupation_code_main': unique_values['occupation_code_main'][0],
         'total_employed': 0,  # Default value
-        'household_stat': unique_values['household_stat'][0],
         'household_summary': unique_values['household_summary'][0],
         'vet_benefit': 0,  # Default value
         'tax_status': unique_values['tax_status'][0],
@@ -255,8 +245,6 @@ def prediction():
         'losses': 0,  # Default value
         'stocks_status': 0,  # Default value
         'citizenship': unique_values['citizenship'][0],
-        'mig_year': 0,
-        'country_of_birth_own': 'United-States',
         'importance_of_record': 0.0  # Default value
     }
     
@@ -282,7 +270,6 @@ def prediction():
         input_data['occupation_code'] = st.selectbox("Category Code of Occupation", unique_values['occupation_code'], key='occupation_code')
         input_data['occupation_code_main'] = st.selectbox("Major Occupation Code", unique_values['occupation_code_main'], key='occupation_code_main')
         input_data['total_employed'] = st.number_input("Number of Persons Worked for Employer", min_value=0, key='total_employed')
-        input_data['household_stat'] = st.selectbox("Detailed Household and Family Status", unique_values['household_stat'], key='household_stat')
         input_data['household_summary'] = st.selectbox("Detailed Household Summary", unique_values['household_summary'], key='household_summary')
         input_data['vet_benefit'] = st.selectbox("Veteran Benefits", unique_values['vet_benefit'], key='vet_benefit')
     
@@ -292,8 +279,6 @@ def prediction():
         input_data['losses'] = st.number_input("Losses", min_value=0, key='losses')
         input_data['stocks_status'] = st.number_input("Dividends from Stocks", min_value=0, key='stocks_status')
         input_data['citizenship'] = st.selectbox("Citizenship", unique_values['citizenship'], key='citizenship')
-        input_data['mig_year'] = st.selectbox("Migration Year", unique_values['mig_year'], key='migration_year')
-        input_data['country_of_birth_own'] = st.selectbox("Country of Birth", unique_values['country_of_birth_own'], key='country_of_birth_own')
         input_data['importance_of_record'] = st.number_input("Importance of Record", min_value=0, key='importance_of_record')
     
     # Button to make predictions
@@ -318,13 +303,13 @@ def prediction():
           
 
 # Add navigation to the selected page
-selected_page = st.selectbox("Select a page", ["Home", "Solution", "EDA", "Predict Income"])
+selected_page = st.selectbox("Select a page", ["Home", "Solution", "Data Insights and Recommendations", "Predict Income"])
 
 if selected_page == "Home":
     home_page()
 elif selected_page == "Solution":
     solution()   
-elif selected_page == "EDA":
+elif selected_page == "Data Insights and Recommendations":
     perform_eda()
 else:
     prediction()
