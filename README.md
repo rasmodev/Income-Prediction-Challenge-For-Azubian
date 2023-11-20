@@ -28,7 +28,6 @@ After clicking on the link to the working FastAPI, click on "Try It Out", provid
 - [Project Overview](#project-overview)
 - [Project Setup](#project-setup)
 - [Data Fields](#data-fields)
-- [Getting Started](#getting-started)
 - [Business Understanding](#business-understanding)
 - [Data Understanding](#data-understanding)
 - [Data Preparation](#data-preparation)
@@ -140,7 +139,7 @@ Null Hypothesis (H0): There is no significant association between the individual
 Alternative Hypothesis (H1): There is a significant association between the individual's age and income level.
 
 ** Key Analytical Questions and Answers**
-- [Does a higher education level correspond to a higher likelihood of having incomes above the threshold](#does-a-higher-education-level-correspond-to-a-higher-likelihood-of-having-incomes-above-the-threshold)
+- [Does higher education level correspond to a higher likelihood of having incomes above the threshold?](#does-higher-education-level-correspond-to-a-higher-likelihood-of-having-incomes-above-the-threshold)
 - [How does age relate to income levels in the dataset?](#how-does-age-relate-to-income-levels-in-the-dataset)
 - [Is there a significant gender-based income disparity?](#is-there-a-significant-gender-based-income-disparity)
 - [Are there differences in employment status between the two income groups?](#are-there-differences-in-employment-status-between-the-two-income-groups)
@@ -196,25 +195,38 @@ Nonfilers seem to have a disproportionately higher representation in the below-i
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/030b4bb1-58eb-404c-9531-e9b54f69dc5e)
 
 
-## Feature Engineering
+## Data Preparation
+### Feature Engineering
 Performed unique value exploration, column renaming, missing value imputation, column dropping, target column extraction, and balancing the target column to address class imbalance.
 
-## Encoding Categorical Variables
-Identified and encoded categorical variables using the OrdinalEncoder, ensuring effective utilization of the data in predictive tasks.
+### Balancing The Target Variable
+There was a significant class imbalance in the target variable, with a relatively small number of participants in the high-income category compared to the low-income category. This significant disparity in class distribution may have had implications for modeling and predictive accuracy. Class imbalances can lead to models that are biased toward the majority class, potentially impacting the model's ability to accurately predict the minority class (Above Limit). I addressed this class imbalance through oversampling.
 
-## Modeling: Dataset Splitting
+## Modeling
+The training dataset for this income prediction problem contains numerous categorical features, some of which have a large number of unique values. This can pose challenges in terms of encoding and model performance. To address these issues, I opted for the CatBoost classifier as my modeling solution:
+
+**1. Automatic Categorical Feature Handling:** CatBoost offers a unique advantage by automatically handling categorical features. Unlike traditional models that require extensive feature encoding using techniques like One-Hot Encoding or Label Encoding, CatBoost can directly work with categorical data. This simplifies the preprocessing step and ensures that we can utilize our categorical features without manual intervention.
+
+**2. Handling Missing Values:** CatBoost excels in handling missing values. It utilizes an algorithm called Symmetric Weighted Quantile Sketch (SWQS) to automatically manage missing data. This not only simplifies the preprocessing process but also reduces the risk of overfitting, contributing to improved overall model performance.
+
+**3. Streamlined Feature Scaling:** Another benefit of CatBoost is its built-in feature scaling. It takes care of scaling all columns uniformly, saving us the effort of manually converting columns. This helps streamline the data preparation phase.
+
+**4. Built-in Cross-Validation:** CatBoost includes a built-in cross-validation method, simplifying the task of selecting the best hyperparameters for our model. This ensures that our model's performance is optimized without the need for extensive manual tuning.
+
+**5. Regularization Techniques:** CatBoost supports both L1 and L2 regularization methods. These techniques are valuable for reducing overfitting and enhancing the model's ability to generalize well to unseen data.
+
+By choosing CatBoost, I aimed to efficiently address the challenges posed by my dataset, particularly the extensive set of categorical features with many unique values which would have posed challenges during encoding. CatBoost not only simplifies the modeling process but also enhances the model's performance. It's a robust solution for the income prediction problem.
+
+### Dataset Splitting
 Split the preprocessed training dataset into training and evaluation sets (80% training, 20% evaluation) using train_test_split.
 
-## Modeling: Feature Scaling
-Scaled numerical features using Min-Max scaling to ensure consistent scale and prevent certain features from dominating the learning process.
-
 ## Model Training and Evaluation
-Utilized the CatBoost Classifier for its automatic categorical feature handling, handling of missing values, streamlined feature scaling, built-in cross-validation, and regularization techniques. Achieved an Accuracy of 89.38% and an F1-Score of 0.89.
+Achieved an Accuracy of 89.38% and an F1-Score of 0.89.
 
 ## Saving The Model and Key Components
 Saved the model, unique values, encoder, and scaler in a single pickle file for later use.
 
-## App Architecture
+## Deployment
 Utilized Streamlit for a user-friendly interface and FAST API for scalable predictions. The architecture allows for flexibility in deployment, scalability, high performance, and easy integration.
 
 ## Why Streamlit + FastAPI?
@@ -248,7 +260,7 @@ Let's connect on LinkedIn:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasmo-/) 
 
 # Acknowledgments:
-We would like to thank the open-source community and the data providers who contributed to the dataset used in this project. Their efforts have made advancements in income prediction possible.
+I would like to thank the open-source community and the data providers who contributed to the dataset used in this project. Their efforts have made advancements in income prediction possible.
 
 Feel free to explore the code, use the web application, and contribute to the project's development. Data-driven insights can contribute to a more equitable society, and together, we can make a difference.
 
