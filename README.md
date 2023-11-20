@@ -132,71 +132,14 @@ I began by understanding the problem domain, which involved predicting income le
 I defined the project goals and objectives, such as addressing income inequality through data-driven insights.
 
 ## Data Understanding:
-I collected the dataset from [your_data_source_link], which included various income-related attributes. After an overview of the first few columns, I formulated hypotheses and key analytical questions that would guide the understanding of the dataset.
+I collected the dataset from [Zindi](https://zindi.africa/competitions/income-prediction-challenge-for-azubian), which included various income-related attributes. After an overview of the first few columns, I formulated hypotheses and key analytical questions that would guide the understanding of the dataset.
 
 **Hypothesis:** 
 Null Hypothesis (H0): There is no significant association between the individual's age and income level.
 
 Alternative Hypothesis (H1): There is a significant association between the individual's age and income level.
 
-**Key
-
- Analytical Questions:** 
-
-- i. Are there any correlations or patterns between numerical features (e.g., age, education) and income levels?
-
-- ii. How does the distribution of key numerical variables (e.g., age) differ between income categories?
-
-- iii. Is there a relationship between education level and income?
-
-I understand your concern. It seems there might have been a misunderstanding in our conversation. I apologize for any confusion.
-
-Let me reconstruct the README with the original links and tables:
-
----
-
-# Income Prediction ML Project with FastAPI Integration
-
-## Summary
-This repository contains a machine learning project focused on predicting income levels and integrating the model into a web application using FAST API.
-
-| Jupyter Notebook | Power BI Dashboard | Published Article | Deployed App on Hugging Face |
-| --- | --- | --- | --- |
-| [Notebook with code and analysis](https://github.com/your_username/Income-Prediction-ML-Project-with-FastAPI-Deployment/blob/main/income_prediction_notebook.ipynb) | [Interactive Dashboard](https://app.powerbi.com/view?r=your_power_bi_link) | [Published Article on Medium](https://medium.com/@your_username/income-prediction-with-machine-learning-a-guide-123456789) | [Link to working FastAPI](https://your-hugging-face-deployment.hf.space/docs/) |
-
-## Project Overview:
-This project aims to leverage machine learning to predict income levels, addressing the challenges of income inequality and providing insights for policymakers.
-
-### Business Understanding
-- Gained a deep understanding of income inequality.
-- Defined objectives and set the F1 score as the evaluation metric.
-
-### Data Understanding
-- Loaded and explored provided datasets, including variable descriptions and relationships.
-
-### Data Preparation
-- Preprocessed data by handling missing values and anomalies.
-- Performed feature engineering.
-
-### Modeling
-- Selected and trained ML classification algorithms on the training dataset to predict income.
-
-### Evaluation
-- Assessed model performance using the F1 score, cross-validation, and hyperparameter tuning.
-
-### Deployment
-- Deployed the model for prediction on the test dataset through Streamlit and FAST API with Docker and Hugging Face.
-
-## Dataset Overview
-The train dataset contained 209,499 rows and 43 columns. The test dataset has 89,786 rows and 42 columns.
-
-## Missing Values
-Significant missing data in both the train and test datasets. Columns with more than 70% missing values were dropped.
-
-## Hypothesis Testing
-Performed a chi-square test for education levels and income categories, revealing a statistically significant association between education levels and income categories.
-
-## Analytical Questions and Answers
+** Key Analytical Questions and Answers**
 - [Does higher education level correspond to a higher likelihood of having incomes above the threshold?](#does-higher-education-level-correspond-to-a-higher-likelihood-of-having-incomes-above-the-threshold)
 - [How does age relate to income levels in the dataset?](#how-does-age-relate-to-income-levels-in-the-dataset)
 - [Is there a significant gender-based income disparity?](#is-there-a-significant-gender-based-income-disparity)
@@ -206,30 +149,30 @@ Performed a chi-square test for education levels and income categories, revealin
 - [What is the relationship between occupation and income categories?](#what-is-the-relationship-between-occupation-and-income-categories)
 - [How does tax status correspond to income levels?](#how-does-tax-status-correspond-to-income-levels)
 
-### Does a higher education level correspond to a higher likelihood of having incomes above the threshold?
+### i. Does a higher education level correspond to a higher likelihood of having incomes above the threshold?
 
 The dataset exhibits substantial income inequality, especially at lower education tiers, but higher education is positively correlated with income. Income inequality persists even at higher education levels, suggesting that other factors also contribute to income inequality.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/84b30952-9680-47ee-939b-1d752ca30278)
 
-### How does age relate to income levels in the dataset?
+### ii. How does age relate to income levels in the dataset?
 
 Lower-income individuals are younger on average than higher-income individuals, but there is a broader age range in the higher-income group. Older individuals are more likely to have incomes above the threshold, and the higher-income group has a more diverse age distribution.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/95d9be4e-00de-4fac-8e60-a863372a8415)
 
 
-### Is there a significant gender-based income disparity?
+### iii. Is there a significant gender-based income disparity?
 
 Women are more likely to be below the income threshold than men, indicating a significant gender disparity in income levels.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/cbeafcdf-1eee-44b0-87fb-5ccd098c9c85)
 
 
-### Are there differences in employment status between the two income groups?
+### iv. Are there differences in employment status between the two income groups?
 
 Income inequality is present across all employment statuses, with individuals in full-time schedules, part-time roles, and unemployment facing financial challenges.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/b6d0a8bf-8c1c-4817-b540-fa68e38f4fe0)
 
 
-### How do race and ethnicity correlate with income levels in the dataset?
+### v. How do race and ethnicity correlate with income levels in the dataset?
 
 Racial income disparities exist, with White individuals having a higher count above the income threshold than other racial groups. Citizens have a more diverse income distribution than foreigners.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/48a4b97f-db44-4832-ab12-21b582d9003f)
@@ -241,13 +184,13 @@ The majority of foreigners in the dataset are concentrated below the income thre
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/68e7f71e-ad11-4c6d-9fd6-06458a6919d0)
 
 
-### What is the relationship between occupation and income categories?
+### vi. What is the relationship between occupation and income categories?
 
 The majority of individuals with income below the threshold are in occupations categorized as "Unknown," indicating potential associations between specific occupations and higher income levels.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/f1254bf0-1dd6-4f22-8582-5f75d6b01394)
 
 
-### How does tax status correspond to income levels?
+### vii. How does tax status correspond to income levels?
 
 Nonfilers seem to have a disproportionately higher representation in the below-income threshold category, indicating a potential income disparity among nonfilers.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/030b4bb1-58eb-404c-9531-e9b54f69dc5e)
