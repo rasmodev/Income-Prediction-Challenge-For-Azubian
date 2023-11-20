@@ -149,30 +149,30 @@ Alternative Hypothesis (H1): There is a significant association between the indi
 - [What is the relationship between occupation and income categories?](#what-is-the-relationship-between-occupation-and-income-categories)
 - [How does tax status correspond to income levels?](#how-does-tax-status-correspond-to-income-levels)
 
-### i. Does a higher education level correspond to a higher likelihood of having incomes above the threshold?
+### Does a higher education level correspond to a higher likelihood of having incomes above the threshold?
 
 The dataset exhibits substantial income inequality, especially at lower education tiers, but higher education is positively correlated with income. Income inequality persists even at higher education levels, suggesting that other factors also contribute to income inequality.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/84b30952-9680-47ee-939b-1d752ca30278)
 
-### ii. How does age relate to income levels in the dataset?
+### How does age relate to income levels in the dataset?
 
 Lower-income individuals are younger on average than higher-income individuals, but there is a broader age range in the higher-income group. Older individuals are more likely to have incomes above the threshold, and the higher-income group has a more diverse age distribution.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/95d9be4e-00de-4fac-8e60-a863372a8415)
 
 
-### iii. Is there a significant gender-based income disparity?
+### Is there a significant gender-based income disparity?
 
 Women are more likely to be below the income threshold than men, indicating a significant gender disparity in income levels.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/cbeafcdf-1eee-44b0-87fb-5ccd098c9c85)
 
 
-### iv. Are there differences in employment status between the two income groups?
+### Are there differences in employment status between the two income groups?
 
 Income inequality is present across all employment statuses, with individuals in full-time schedules, part-time roles, and unemployment facing financial challenges.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/b6d0a8bf-8c1c-4817-b540-fa68e38f4fe0)
 
 
-### v. How do race and ethnicity correlate with income levels in the dataset?
+### How do race and ethnicity correlate with income levels in the dataset?
 
 Racial income disparities exist, with White individuals having a higher count above the income threshold than other racial groups. Citizens have a more diverse income distribution than foreigners.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/48a4b97f-db44-4832-ab12-21b582d9003f)
@@ -184,13 +184,13 @@ The majority of foreigners in the dataset are concentrated below the income thre
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/68e7f71e-ad11-4c6d-9fd6-06458a6919d0)
 
 
-### vi. What is the relationship between occupation and income categories?
+### What is the relationship between occupation and income categories?
 
 The majority of individuals with income below the threshold are in occupations categorized as "Unknown," indicating potential associations between specific occupations and higher income levels.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/f1254bf0-1dd6-4f22-8582-5f75d6b01394)
 
 
-### vii. How does tax status correspond to income levels?
+### How does tax status correspond to income levels?
 
 Nonfilers seem to have a disproportionately higher representation in the below-income threshold category, indicating a potential income disparity among nonfilers.
 ![image](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/assets/131151974/030b4bb1-58eb-404c-9531-e9b54f69dc5e)
