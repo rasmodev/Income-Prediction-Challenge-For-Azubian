@@ -140,7 +140,7 @@ Null Hypothesis (H0): There is no significant association between the individual
 Alternative Hypothesis (H1): There is a significant association between the individual's age and income level.
 
 ** Key Analytical Questions and Answers**
-- [Does higher education level correspond to a higher likelihood of having incomes above the threshold?](#does-higher-education-level-correspond-to-a-higher-likelihood-of-having-incomes-above-the-threshold)
+- [Does a higher education level correspond to a higher likelihood of having incomes above the threshold](#does-a-higher-education-level-correspond-to-a-higher-likelihood-of-having-incomes-above-the-threshold)
 - [How does age relate to income levels in the dataset?](#how-does-age-relate-to-income-levels-in-the-dataset)
 - [Is there a significant gender-based income disparity?](#is-there-a-significant-gender-based-income-disparity)
 - [Are there differences in employment status between the two income groups?](#are-there-differences-in-employment-status-between-the-two-income-groups)
