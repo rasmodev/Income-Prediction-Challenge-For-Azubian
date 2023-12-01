@@ -1,4 +1,4 @@
-# Income-Prediction-ML-Project-with-FAST-API-Integration
+# Income-Prediction-ML-Project
 This repository contains a machine learning project focused on predicting income levels and integrating the model into a web application using FAST API.
 
 <p align="center">
