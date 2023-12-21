@@ -1,5 +1,5 @@
 # Income-Prediction-ML-Project
-This repository contains a machine learning project focused on predicting income levels and integrating the model into a web application using FAST API.
+This repository contains a machine learning project focused on predicting income levels and deploying the model into an app frontend using Streamlit and a web application backend using FastAPI.
 
 <p align="center">
   <img src="/screenshots/default.jpg" width="800">
