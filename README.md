@@ -12,8 +12,8 @@ This project aims to leverage machine learning to predict income levels, address
 | -------------                  | -------------    | -------------    |    -----------------    |    -----------------
 |[Notebook with analysis and model development](https://github.com/rasmodev/Income-Prediction-Challenge-For-Azubian/blob/main/dev/Income_Prediction.ipynb)|  [Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDNjMmExZjYtMWU2NS00NTBjLTk4Y2EtYmQ2MWU2OWMwODMyIiwidCI6IjQ0ODdiNTJmLWYxMTgtNDgzMC1iNDlkLTNjMjk4Y2I3MTA3NSJ9) |  [Published Article on Medium]() |[Link to Deployed Streamlit App](https://rasmodev-income-prediction-streamlit.hf.space/) |[Link to Deployed FastAPI](https://rasmodev-income-prediction-fastapi.hf.space/docs)
 
-## FastAPI Interface
-After clicking on the link to the working FastAPI, click on "Try It Out", provide the required details, and click on the **"EXECUTE"** button.
+## App Interface
+After clicking on the link to the working FastAPI, click on "Try It Out", provide the required details, and click on the **"PREDICT"** button.
 
 ![App Screenshot](screenshots/app_home.png)
 
